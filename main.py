@@ -1,7 +1,7 @@
 from lib import wiki_list
 import os
 
-wiki_list.select("阿比")
+wiki_list.select("首页")
 
 """ list_count=wiki_list.wiki_get_mod_list_url_count(temp_list)
 temp_count=0
