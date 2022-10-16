@@ -20,7 +20,7 @@ def wiki_all_list():
     mod_list = re.findall(r'jsdata = (.*?)\n', r.text, re.DOTALL)
     # 将json格式的字符串转换为字典
     mod_list = json.loads(mod_list[0])
-    return mod_list['tree'][0]["s"]
+    return mod_list['tree']
 
 def wiki_get_mod_list_url(temp_list,url,path='.'):
     # 如果目录不存在则创建
@@ -106,7 +106,7 @@ def path_complete(path):
             os.makedirs(path_temp)
 
 def select(name):
-    wiki_url='https://wiki.flapi.cn/doku.php?id=02%E8%81%94%E6%9C%BAmod%E5%8C%BA'
+    wiki_url='https://wiki.flapi.cn/doku.php?id='
     temp_list=wiki_all_list()
     temp_key_value=wiki_get_key_value(temp_list,wiki_url,'./temp')
     if not name in temp_key_value:
