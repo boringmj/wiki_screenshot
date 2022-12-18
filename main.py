@@ -1,8 +1,11 @@
 from lib import wiki_list
+from selenium.webdriver.common.by import By
+from selenium import webdriver
+from lib import screenshot
 
-wiki_list.select("魔法石")
+wiki_list.select("巨大化魔法")
 
-""" wiki_url='https://wiki.flapi.cn/doku.php?id=02%E8%81%94%E6%9C%BAmod%E5%8C%BA'
+""" wiki_url='https://wiki.flapi.cn/doku.php?id='
 temp_list=wiki_list.wiki_all_list()
 list_count=wiki_list.wiki_get_mod_list_url_count(temp_list)
 temp_count=0

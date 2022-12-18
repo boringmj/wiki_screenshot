@@ -116,7 +116,7 @@ def select(name):
     path_complete(temp_select[0])
     driver = webdriver.Chrome(executable_path='driver/chromedriver.exe')
     try:
-        screenshot.wiki_screenshot(temp_select[1],driver,temp_select[0],500)
+        screenshot.wiki_screenshot(temp_select[1],driver,temp_select[0],100)
     except Exception as e:
         print(e)
     driver.quit()
